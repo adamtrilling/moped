@@ -32,6 +32,7 @@ module Moped
       end
 
       def data
+        @data = nil if @data.is_a?(Array)
         @data ||= @@generator.next
       end
 
